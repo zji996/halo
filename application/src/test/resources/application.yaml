@@ -4,6 +4,8 @@ spring:
   output:
     ansi:
       enabled: detect
+  thymeleaf:
+    cache: false
   r2dbc:
     name: halo-test
     generate-unique-name: true

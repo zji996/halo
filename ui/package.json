@@ -6,8 +6,8 @@
   "scripts": {
     "prepare": "cd .. && husky install ui/.husky",
     "dev": "run-p dev:console dev:uc",
-    "dev:uc": "vite --host --config ./vite.uc.config.ts",
-    "dev:console": "vite --host --config ./vite.config.ts",
+    "dev:uc": "NODE_OPTIONS='--no-deprecation' vite --host --config ./vite.uc.config.ts",
+    "dev:console": "NODE_OPTIONS='--no-deprecation' vite --host --config ./vite.config.ts",
     "build": "run-s build:console build:uc",
     "build:uc": "vue-tsc --noEmit -p tsconfig.app.json --composite false && vite build --config ./vite.uc.config.ts",
     "build:console": "vue-tsc --noEmit -p tsconfig.app.json --composite false && vite build --config ./vite.config.ts",
